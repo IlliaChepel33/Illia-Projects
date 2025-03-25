@@ -10,7 +10,6 @@ class Program
 {
     public static void Main (string[] args)
     {
-
         Console.Write("Type in the first number: ");
         int num01 = Convert.ToInt32(Console.ReadLine()); // integer 1
 
