@@ -3,6 +3,9 @@
 // March 19, 2025
 // Giving different options for correct answers OR using the SWITCH statement
 
+
+
+
 using System;
 
 
@@ -26,15 +29,42 @@ class Program
         // if the answer is right
         if (answer == num01 * num02)
         {
-            Console.WriteLine("Good Job");
-        }
-        else
-        {
 
             // the range for random number is bigger than the number of cases, so default will be returned when randResponce == 4, 5, 6
             int randResponse = numberGenerator.Next(1, 7);
 
             // random responses to wrong answers
+            switch (randResponse)
+            {
+
+                // first response
+                case 1:
+                    Console.WriteLine("Good Job.");
+                    goto Start;
+
+                // second response
+                case 2:
+                    Console.WriteLine("The answer if correct.");
+                    goto Start;
+
+                // third response
+                case 3:
+                    Console.WriteLine($"{num01} * {num02} does equal {answer}");
+                    goto Start;
+
+                // default response
+                default:
+                    Console.WriteLine("Good Job");
+                    goto Start;
+            }
+        }
+
+        // if the answer is incorrect
+        else
+        {
+            int randResponse = numberGenerator.Next(1, 7);
+
+
             switch (randResponse)
             {
 
