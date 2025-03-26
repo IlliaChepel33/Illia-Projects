@@ -62,10 +62,14 @@ class Program
         // if the answer is incorrect
         else
         {   
+
+            // if the user answer is smaller
             if (answer < (num01*num02))
             {
                 int randResponse = numberGenerator.Next(1, 7);
 
+
+                // random responses
                 switch(randResponse)
                 {
                 case 1:
@@ -79,10 +83,14 @@ class Program
                     goto Start;
                 }
             }
+
+            // if the user answer is bigger
             else if (answer > (num01*num02))
             {
                 int randResponse = numberGenerator.Next(1, 7);
 
+
+                // random responses
                 switch(randResponse)
                 {
                 case 1:
