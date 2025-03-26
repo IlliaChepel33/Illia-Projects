@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch", "Switch\Switch.csproj", "{4C57675B-891E-407E-B659-B3958A4FE182}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLoops", "ForLoops\ForLoops.csproj", "{A263AF69-783D-4034-9E68-8A5C47F4C79E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{4C57675B-891E-407E-B659-B3958A4FE182}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C57675B-891E-407E-B659-B3958A4FE182}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C57675B-891E-407E-B659-B3958A4FE182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A263AF69-783D-4034-9E68-8A5C47F4C79E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A263AF69-783D-4034-9E68-8A5C47F4C79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A263AF69-783D-4034-9E68-8A5C47F4C79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A263AF69-783D-4034-9E68-8A5C47F4C79E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

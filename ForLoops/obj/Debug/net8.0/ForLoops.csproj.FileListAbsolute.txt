@@ -1,0 +1,6 @@
+/workspaces/Illia-Projects/ForLoops/obj/Debug/net8.0/ForLoops.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/Illia-Projects/ForLoops/obj/Debug/net8.0/ForLoops.AssemblyInfoInputs.cache
+/workspaces/Illia-Projects/ForLoops/obj/Debug/net8.0/ForLoops.AssemblyInfo.cs
+/workspaces/Illia-Projects/ForLoops/obj/Debug/net8.0/ForLoops.csproj.CoreCompileInputs.cache
+/workspaces/Illia-Projects/ForLoops/obj/Debug/net8.0/ForLoops.MvcApplicationPartsAssemblyInfo.cache
+/workspaces/Illia-Projects/ForLoops/obj/Debug/net8.0/ForLoops.sourcelink.json

@@ -15,7 +15,7 @@ class Program
     {
         Random numberGenerator = new Random();
 
-        // random number to be multiplied
+        // random numbers to be multiplied
         int num01 = numberGenerator.Next(1, 100);
         int num02 = numberGenerator.Next(1, 100);
 
@@ -33,60 +33,69 @@ class Program
             // the range for random number is bigger than the number of cases, so default will be returned when randResponce == 4, 5, 6
             int randResponse = numberGenerator.Next(1, 7);
 
-            // random responses to wrong answers
+            // random responses to right answers
             switch (randResponse)
             {
 
                 // first response
                 case 1:
                     Console.WriteLine("Good Job.");
-                    goto Start;
+                    break;
 
                 // second response
                 case 2:
-                    Console.WriteLine("The answer if correct.");
-                    goto Start;
+                    Console.WriteLine("The answer is correct.");
+                    break;
 
                 // third response
                 case 3:
-                    Console.WriteLine($"{num01} * {num02} does equal {answer}");
-                    goto Start;
+                    Console.WriteLine($"{num01} * {num02} does equal {answer}.");
+                    break;
 
                 // default response
                 default:
                     Console.WriteLine("Good Job");
-                    goto Start;
+                    break;
             }
         }
 
         // if the answer is incorrect
         else
-        {
-            int randResponse = numberGenerator.Next(1, 7);
-
-
-            switch (randResponse)
+        {   
+            if (answer < (num01*num02))
             {
+                int randResponse = numberGenerator.Next(1, 7);
 
-                // first response
+                switch(randResponse)
+                {
                 case 1:
-                    Console.WriteLine("Wrong answer.");
+                    Console.WriteLine("The answer is incorrect. Try a bigger number.");
                     goto Start;
-
-                // second response
                 case 2:
-                    Console.WriteLine("The answer is incorrect.");
+                    Console.WriteLine($"{num01} * {num02} is bigger than that. Try again");
                     goto Start;
-
-                // third response
-                case 3:
-                    Console.WriteLine($"{num01} * {num02} does not equal to {answer}.");
-                    goto Start;
-
-                // default response
                 default:
-                    Console.WriteLine("Try again.");
+                    Console.WriteLine("Try a bigger number.");
                     goto Start;
+                }
+            }
+            else if (answer > (num01*num02))
+            {
+                int randResponse = numberGenerator.Next(1, 7);
+
+                switch(randResponse)
+                {
+                case 1:
+                    Console.WriteLine("The answer is incorrect. Try a smaller number.");
+                    goto Start;
+                case 2:
+                    Console.WriteLine($"{num01} * {num02} is smaller than that. Try again");
+                    goto Start;
+                default:
+                    Console.WriteLine("Try a smaller number.");
+                    goto Start;
+                }
+
             }
         }
     }
