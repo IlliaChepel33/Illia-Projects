@@ -2,12 +2,13 @@
 // Mrs. Bender
 // March 19, 2025
 // HandIn
+// The program generates a random number (in a range defined by the user) and tries to guess it (# of attempts is also defined by the user)
 
 using System;
 
 class Program
 {
-    public static void Main(string[] args)
+    public static void Main (string[] args)
     {
         Console.Write("How many possible answers? ");
         var max = Convert.ToInt32(Console.ReadLine());
