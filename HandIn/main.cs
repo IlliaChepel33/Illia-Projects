@@ -10,42 +10,78 @@ class Program
 {
     public static void Main (string[] args)
     {
-        Console.Write("How many possible answers? ");
-        var max = Convert.ToInt32(Console.ReadLine());
-        Console.Write("How many attempts? ");
-        var tries = Convert.ToInt32(Console.ReadLine());
+        int max = 0;
+        int tries = 0;
 
+
+        // user prompts
+        try
+        {
+            Console.Write("How many possible answers? ");
+            max = Convert.ToInt32(Console.ReadLine());
+            Console.Write("How many attempts? ");
+            tries = Convert.ToInt32(Console.ReadLine());
+            if (max <= 0 | tries <= 0)
+            {
+                throw new FormatException();
+            }
+        }
+        catch (FormatException)
+        {
+
+            // closes the program if the format is wrong 
+            Console.WriteLine("Please use positive numbers.\n");
+            Environment.Exit(0);
+        }
+
+
+        // so that the number won't be negative or 0
         int min = 1;
 
         Random numberGenerator = new Random();
 
+
+        // random number
         int ans = numberGenerator.Next(min, max);
+        Console.WriteLine($"The number to be guessed is {ans}");
 
 
-        for (int x=0; x < tries; x++)
+        // try random numbers to figure out the answer
+        for (int x=0; x <= tries; x++)
         {
-
-            int num = numberGenerator.Next(min, max);
-            if (num == ans)
+            if (x==tries)
             {
-                Console.WriteLine($"Attempt #{x}. The answer is {num}");
+                Console.WriteLine("Ran out of attempts.");
                 break;
             }
+
+            // random guess
+            int num = numberGenerator.Next(min, max);
+
+            // if the number is correct
+            if (num == ans)
+            {
+                Console.WriteLine($"Attempt #{x+1}. The answer is {num}");
+                break;
+            }
+
+
+            // if number is less than the answer
             else if (num < ans)
             {
-                Console.WriteLine($"Attempt #{x}. {num} is too small");
-                if (min==num)
-                {
-                    min = num+1;
-                }
-                else
-                {
-                min = num;
-                }
+                Console.WriteLine($"Attempt #{x+1}. {num} is too small");
+
+                // changes the range of random numbers to be (num+1(*new min*), max)
+                min = num+1;
             }
+
+
+            // if number is bigger than the answer
             else if (num > ans)
             {
-                Console.WriteLine($"Attempt #{x}. {num} is too big");
+                Console.WriteLine($"Attempt #{x+1}. {num} is too big");
+
+                // changes the range of random numbers to be (min, num(*new max*))
                 max = num;
             }
         }
