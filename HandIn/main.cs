@@ -2,7 +2,7 @@
 // Mrs. Bender
 // March 19, 2025
 // HandIn
-// The program generates a random number (in a range defined by the user) and tries to guess it (# of attempts is also defined by the user)
+// The program generates a random number (in a range set by the user) and tries to guess it (# of attempts is also set by the user)
 
 using System;
 
