@@ -72,3 +72,9 @@ class Manager : Business
         }
     }
 }
+
+class Employee : Business
+{
+    string manager = "None";
+    
+}
