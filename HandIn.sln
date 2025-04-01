@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandIn", "HandIn\HandIn.csproj", "{FA51294B-4851-4789-B0E8-90E6E73B972C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP", "OOP\OOP.csproj", "{54845781-1483-42B6-BAED-1B0580E5B710}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{FA51294B-4851-4789-B0E8-90E6E73B972C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA51294B-4851-4789-B0E8-90E6E73B972C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA51294B-4851-4789-B0E8-90E6E73B972C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54845781-1483-42B6-BAED-1B0580E5B710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54845781-1483-42B6-BAED-1B0580E5B710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54845781-1483-42B6-BAED-1B0580E5B710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54845781-1483-42B6-BAED-1B0580E5B710}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
